@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {BrowserRouter, Routes, Route} import 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import MainPage from 'src/pages/index/index'
 
