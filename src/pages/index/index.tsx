@@ -1,9 +1,9 @@
-import {grantRoleMinter, mint} from "../contract"
+import {grantRoleMinter,} from "../contract"
 import {useState} from 'react';
 
 const index = ()=>{
-  const [addr, setAddr] = useState();
-  const [amount, setAmount] = useState();
+  const [addr, setAddr] = useState<string>('');
+  const [amount, setAmount] = useState<number>(0);
 
   const handleAddrChange = (e: any) => {
     setAddr(e.target.value);
