@@ -14,7 +14,7 @@ export const grantRoleMinter = async (account: string, amount: number)=>{
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ account, amount }), // JSON으로 전송
+    body: JSON.stringify({ account, amount.toString() }), // JSON으로 전송
   });
 };
 
@@ -32,6 +32,6 @@ export const mint = async (to: string, amount: number) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ to, amount }), // JSON으로 전송
+    body: JSON.stringify({ to, amount.toString() }), // JSON으로 전송
   });
 };
