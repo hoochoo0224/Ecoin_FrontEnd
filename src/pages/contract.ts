@@ -1,9 +1,9 @@
 const API_BASE_URL = 'https://port-0-ecoin-backend-m3x1zrsv043003ce.sel4.cloudtype.app/';
 
-export const grantRoleMinter = async (account: string, amount: number)=>{
+export const grantRoleMinter = async (account: string, amount: string)=>{
   const formData = new FormData();
   formData.append('account', account);
-  formData.append('amount', String(amount));
+  formData.append('amount', amount);
 
   await fetch(`${API_BASE_URL}/api/grant-role-minter`, {
     method: 'POST',
@@ -11,10 +11,10 @@ export const grantRoleMinter = async (account: string, amount: number)=>{
   });
 };
 
-export const mint = async (to: string, amount: number) => {
+export const mint = async (to: string, amount: string) => {
   const formData = new FormData();
   formData.append('to', to);
-  formData.append('amount', String(amount));
+  formData.append('amount', amount);
 
   await fetch(`${API_BASE_URL}/api/mint`, {
     method: 'POST',

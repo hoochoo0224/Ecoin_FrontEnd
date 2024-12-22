@@ -3,7 +3,7 @@ import {useState} from 'react';
 
 const index = ()=>{
   const [addr, setAddr] = useState<string>('');
-  const [amount, setAmount] = useState<number>(0);
+  const [amount, setAmount] = useState<string>('');
 
   const handleAddrChange = (e: any) => {
     setAddr(e.target.value);
