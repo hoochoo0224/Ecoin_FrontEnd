@@ -13,14 +13,16 @@ const Minter = ()=>{
   const [to, setTo] = useState<string>('');
   const [amount, setAmount] = useState<string>(''); 
 
-  useEffect(async () => {
-    if (window.ethereum) {
-      const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-      });
-      setTo(accounts?.[0]);
-    }
-  })
+  useEffect(()=>{
+    (async ()=>{
+      if (window.ethereum) {
+        const accounts = await window.ethereum.request({
+            method: "eth_requestAccounts",
+        });
+        setTo(accounts?.[0]);
+      }
+    })();
+  });
 
   const handleAmountChange = (e: any) => {
     setAmount(e.target.value);
