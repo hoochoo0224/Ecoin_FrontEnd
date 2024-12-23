@@ -34,7 +34,7 @@ const index = ()=>{
   };
 
   const handleSubmit = async () => {
-    if checkAdmin(admin) {
+    if (checkAdmin(admin)) {
       await grantRoleMinter(addr, amount);
     }
   };
