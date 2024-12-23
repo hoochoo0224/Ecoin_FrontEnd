@@ -3,12 +3,18 @@ import {useState, useEffect} from 'react';
 
 import styles from './index.module.scss'
 
+declare global {
+  interface Window {
+    ethereum?: any;
+  }
+}
+
 const index = ()=>{
   const [addr, setAddr] = useState<string>('');
   const [amount, setAmount] = useState<string>('');
   const [admin, setAdmin] = useState<string>('');
 
-  useEffect(()=>{
+  useEffect(async ()=>{
     if (window.ethereum) {
       const accounts = await window.ethereum.request({
           method: "eth_requestAccounts",
