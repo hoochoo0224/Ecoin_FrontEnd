@@ -20,7 +20,7 @@ const index = ()=>{
       <span>발행 권한 주기(관리자만 가능)</span>
       <input type="text" placeholder="주소를 입력하세요." onChange={handleAddrChange} />
       <input type="text" placeholder="Ecoin 양을 입력하세요." onChange={handleAmountChange} />
-      <button onClick={handleSubmit}></button>
+      <button onClick={handleSubmit}>발행 권한 주기</button>
     </div>
   )
 };
